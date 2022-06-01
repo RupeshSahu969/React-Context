@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import Navbar from './conponents/Navbar';
+import Body from './conponents/Body';
+
+
+
+
+// const reducer=(state, {type,payload}) =>{
+//   switch (type) {
+//     case 'increment':
+//       return state + payload;
+//     case 'decrement':
+//       return state - payload;
+//     default:
+//       console.log("Type incorrect",type)
+//       return state;
+//   }
+// }
+
 function App() {
+  // const [state, dispatch] = useReducer(reducer, 0);
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+    
+    <Navbar/>
+    <Body/>
+    
+     
+{/* 
+     Counter: {state}
+     <div>
+      <button onClick={() => dispatch({type: 'decrement',payload : 1})}>-</button>
+      <button onClick={() => dispatch({type: 'increment',payload : 100})}>+</button>
+      </div> */}
     </div>
   );
 }
